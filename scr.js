@@ -1,0 +1,6 @@
+//SCRIPT
+
+var houses = {
+	
+
+}

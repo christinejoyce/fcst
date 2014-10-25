@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="icon" href="img/scar.ico">
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<title>Harry Potter</title>
+		<script src="tools.js" type="text/javascript"></script>
+		<!-------------------------------------- -->
+	
+
+		<style>
+			
+			#d-maincon{
+				width: 100%;
+				height: auto;
+				background: url('img/back.png');
+				margin: auto;
+				padding: auto;
+			}
+			#d-houses img{
+				display:block;
+				margin: auto;
+				padding: 0;
+			}
+			#d-hoghousebg{
+				width: 900px;
+				height: 940px;
+				background: url('img/hogwartshousesbg.png');
+				margin: auto;
+				
+			}
+			#d-again{
+					margin-top: 10px;
+			}
+			#d-h1 h1{
+				font-family: Hog;
+				margin: 0;
+				font-size: 68pt;
+				position: relative;
+				padding-top: 50px;
+				text-align: center;
+				text-shadow: 1px 1px 2px white;
+			}
+			#d-h1{
+				margin:0;
+				padding-bottom: 10px;
+			}
+			#d-par{
+				
+			}
+			#d-par p{
+				color: white;
+				font-size: 24pt;
+				font-family: brush;
+				padding-left: 100px;
+				text-shadow: 1px 2px 2px #000000;
+			}
+		</style>
+	</head>
+	<!--+++++++++++++++BODY------------->
+	
+	<body>
+		<script>
+		var gryffindor = "<b>Founder:</b> Godric Gryffindor.</br></br><b>Traits:</b> The Gryffindor house higlights the traits of courage as well as daring, nerve, and chivalry, and thus its members are generally regarded as brave, though sometimes to the point of recklessness. They can also be short-tempered. Notably, Gryffindor house contributed many members to Dumbledore's Army and the Order of the Phoenix.</br></br><b>Common Room: </b>The Gryffindor Common Room is located in one of the castle's towers (Gryffindor Tower), the entrance to which is located on the seventh floor and is guarded by an oil painting of the Fat Lady, who is garbed in a pink silk dress.</br></br><b>List of known Gryffindors:</b></br>-Harry Potter</br>-Hermione Granger</br>-Ron Weasley</br>-Dean Thomas</br>-Sirius Black</br>-Rubeus Hagrid</br>-Albus Dumbledore</br>-Remus Lupin";
+		var ravenclaw = "<b>Founder:</b> Rowena Ravenclaw.</br></br><b>Traits:</b> Ravenclaw House prizes learning, wisdom, wit, and intellect in its members. Ravenclaws also pride themselves in being original in their ideas, and methods.</br></br><b>Common Room: </b>The Ravenclaw common room is in one of the castle's towers and is wide and circular. You have to climb a tight spiral staircase to get there. It has graceful arched windows, and the walls are hung with blue and bronze silks. The domed ceiling is painted with stars, which are echoed in the midnight-blue carpet.</br></br><b>List of known Raven Claws:</b></br>-Luna Lovegood</br>-Myrtle</br>-Filius Flitwick</br>-Gilderoy Lockhart</br>-Quirinus Quirrell</br>-Laverne de Montmorency</br>-Millicent Bagnold</br>-Ignatia Wildsmith";	
+		var hufflepuff = "<b>Founder:</b> Helga Hufflepuff.</br></br><b>Traits:</b> Students belonging to this house are known to be hard-working, friendly, loyal, honest and rather impartial. It may be that due to their values, Hufflepuffs are not as competitive as the other houses, or are more modest about their accomplishments. Hufflepuff is the most inclusive among the four houses; valuing hard work, patience, loyalty, and fair play .</br></br><b>Common Room: </b>The Hufflepuff Dormitories and Common room have never been seen by outsiders and is the only house with repelling devices in case of intruders. They are accessed through a pile of large barrels, found stacked in a shadowy stone recess on a right-hand side corridor near the kitchens.</br></br><b>List of known Hufflepuffs:</b></br>-Fat Friar</br>-Artemisia Lufkin</br>-Cedric Diggory";		
+		var slytherin = "<b>Founder:</b> Salazar Slytherin.</br></br><b>Traits:</b> Slytherins tend to be ambitious, shrewd, cunning, strong leaders, and achievement-oriented. They also have highly developed senses of self-preservation. </br></br><b>Common Room: </b>The Slytherin common room is found in the dungeons of Hogwarts Castle, and is located underneath the Black Lake. Because of its location, the light in the common room is green. . To enter the slytherin common room one must merely speak aloud the current password in front of a stretch of damp stone wall, </br></br><b>List of known Slytherins:</b></br>-Tom Riddle</br>-Dolores Umbridge</br>-Bellatrix Lestrange</br>-Lucius Malfoy</br>-Draco Malfoy</br>-Avery</br>-Merlin</br>-Cygnus Black III";	
+
+		sortinghat.play();
+				var modalWin = new CreateModalPopUpObject();
+				modalWin.SetCloseButtonImagePath("images/remove.gif");
+			function ShowGryffindor() {
+				modalWin.ShowMessage(gryffindor,635,400,'Gryffindor');
+			}
+			function Showravenclaw() {
+				modalWin.ShowMessage(ravenclaw,580,400,'Raven Claw');
+			}
+			function ShowHufflepuff() {
+				modalWin.ShowMessage(hufflepuff,555,400,'Hufflepuff');
+			}
+			function ShowSlytherin() {
+				modalWin.ShowMessage(slytherin,590,400,'Slytherin');
+			}
+		</script>
+		<div id="d-hd">
+			<img id="hd-pic" src="img/header.png" width="100%">
+		</div>
+		<!--++++++ LIST NAVIGATION+++++++-->
+		<div id="d-nav">
+			<ul id="navli">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="sortinghat.html">Sorting Hat</a></li>
+				<li><a href="siteII/book.html">Books</a></li>
+				<li><a href="tour.html">Tour</a></li>
+				<li><a href="game.html">Game</a></li>
+			</ul>
+		</div>
+		
+		<!--CONTENT STARTS HERE-->
+		<div id="d-main">
+			<div id="d-maincon">
+				<div id="d-hoghousebg">
+					<div id="d-h1">
+						<h1 >Hogwarts Houses</h1>
+					</div>
+					<div id="d-houses">
+							<img usemap="#hogwartsflag" src="img/hogwartsflag copy.png" class="map" >
+							
+							<map name="hogwartsflag" >
+								<area shape="poly"
+								coords="1,250, 1,115,78,33,385,22,383,204,350,202,339,195,327,217,342,250"
+								onclick="ShowGryffindor()"
+								alt=""
+								target="_blank"
+								title="Gryffindor"
+								/>
+								<area shape="poly"
+								 coords="396,17,667,17,735,60,738,253,438,253,449,215,435,197,396,204,"
+								onclick="ShowSlytherin()"
+								alt=""
+								target="_blank"
+								title="Slytherin"
+								/>
+								<area shape="poly"
+								coords="1,260, 339,260,342,294,331,303,347,320,385,310
+								382,465,1,453"
+								onclick="ShowHufflepuff()"
+								alt=""
+								target="_blank"
+								title="Hufflepuff"
+								/>
+								<area shape="poly"
+								coords="436,264, 751,264,738,450,399,462,399,312,443,311,451,302"
+								onclick="Showravenclaw()"
+								alt=""
+								target="_blank"
+								title="Ravenclaw"
+								/>
+							</map>
+					</div>
+					<!-- -----------TEXT-------- -->
+					<div id="d-par">
+						<center><p>Greetings! Welcome to Hogwarts.<br/>Do you want to know which Hogwarts school you are in?<br/><a  href="sortquiz.html"><img src="img/sortme.jpg"></img></a>
+						</p></center>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+		
+	</body>
+	<!--++++++++++++++++++++++++++++++FOOTER-->
+	<footer>
+	<div id="d-footer">
+		<font size=4 color=white>
+		<table  width="100%" align="center"> <tr colspan="20" rowspan="20"><td><center>
+		<a href="aboutus.html">| ABOUT US |</a><a href="references.html"> REFERENCES |</a> </font>
+		</td></tr></table>
+	</div>	
+	</footer>
+</html>

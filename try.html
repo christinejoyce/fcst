@@ -1,0 +1,116 @@
+<!Doctype html>
+<html>
+	<head>
+	<script type="text/javascript"></script>
+						<form >
+						
+						1. Question one? </br>
+							<input type="radio" name="one" id="gryffindor1" /> answer 1
+							<input type="radio" name="one" id="slytherin1" /> answer 2
+							<input type="radio" name="one" id="hufflepuff1" /> answer 3
+							<input type="radio" name="one" id="ravenclaw1" /> answer 4
+							</br></br></p>
+						
+						2. Question two? </br>
+							<input type="radio" name="2" id="gryffindor2" /> answer 1
+							<input type="radio" name="2" id="slytherin2" /> answer 2
+							<input type="radio" name="2" id="hufflepuff2"  /> answer 3
+							<input type="radio" name="2" id="ravenclaw2"  /> answer 4
+							</br></br>
+						
+						3. Question three? </br>
+							<input type="radio" name="3" id="gryffindor3" /> answer 1
+							<input type="radio" name="3" id="slytherin3" /> answer 2
+							<input type="radio" name="3" id="hufflepuff3" /> answer 3
+							<input type="radio" name="3" id="ravenclaw3" /> answer 4
+							</br></br>
+						4. Question four? </br>
+							<input type="radio" name="4" id="gryffindor4" /> answer 1
+							<input type="radio" name="4" id="slytherin4" /> answer 2
+							<input type="radio" name="4" id="hufflepuff4" /> answer 3
+							<input type="radio" name="4" id="ravenclaw4" /> answer 4
+							</br></br>
+								
+							<input type="submit" value="Submit" onclick ="ans()" >
+							</form>
+						<script>
+							function ans (){
+							
+										var g = 0;
+										var s = 0;
+										var h = 0;
+										var r = 0;
+										var highest=0;
+							
+							
+									if(document.getElementById('gryffindor1').checked) {
+									  g++;
+									}else if(document.getElementById('slytherin1').checked) {
+									  s++;
+									
+									}else if(document.getElementById('hufflepuff1').checked) {
+									  h++;
+								
+									}else if(document.getElementById('ravenclaw1').checked) {
+									  r++;
+									}
+									
+									if(document.getElementById('slytherin2').checked) {
+									  s++;
+									}else if(document.getElementById('gryffindor2').checked) {
+									  g++;
+									
+									}else if(document.getElementById('ravenclaw2').checked) {
+									  r++;
+									
+									}else if(document.getElementById('hufflepuff2').checked) {
+									  h++;
+									}
+									
+									if(document.getElementById('ravenclaw3').checked) {
+									  r++;
+									}else if(document.getElementById('hufflepuff3').checked) {
+									  h++;
+									
+									}else if(document.getElementById('slytherin3').checked) {
+									  s++;
+									
+									}else if(document.getElementById('gryffindor3').checked) {
+									  g++;
+									} 
+									
+									if(document.getElementById('ravenclaw4').checked) {
+									  r++;
+									}else if(document.getElementById('hufflepuff4').checked) {
+									  h++;
+									
+									}else if(document.getElementById('slytherin4').checked) {
+									  s++;
+									
+									}else if(document.getElementById('gryffindor4').checked) {
+									  g++;
+									} 
+									
+							
+							
+										
+								//var house;
+								if(s>r && s>g && s>h) {
+									highest = s;
+									//house = "slytherin";
+								} else if (r>s && r>g && r >h){
+									highest = r;
+									//house = "Ravenclaw";
+								} else if ( g>r && g > s && g > h){
+									highest = g;
+									//house = "Gryffindor";
+								} else if (h>s && h>r && h>g){
+									highest =h;
+									//house = "Hufflepuff";
+								}
+								alert(highest);
+							}
+						
+						</script>
+						
+</html>

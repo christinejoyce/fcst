@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Harry Potter-QUIDDITCH WORLD CUP</title>
+		<link rel="icon" href="img/scar.ico">
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<script src="tools.js" type="text/javascript"></script>
+
+
+		<style>
+			body{
+				background-image: url("images/bg.png");
+				background-size: cover;
+				background-repeat: no-repeat;
+				
+				
+			}
+			div.snitch{
+				width: 50px;
+				height: 75px;
+				background-size: 100% 100%;
+				transition: margin 1.0s linear 0s;
+				position:absolute;
+				/*transform: rotateY(180deg);*/
+				cursor: pointer; cursor: hand;
+			}
+ul {
+  list-style: none;
+}
+ 
+li {
+  display: inline;
+}	
+    
+   
+
+		</style>
+	</head>
+	<!--+++++++++++++++BODY------------->
+	
+	<body>
+		<script>
+			sound.play();
+		</script>
+		<div id="d-nav" style="width:100%">
+						<ul id="navli">
+
+
+				<li><a >CATCH THE GOLDEN SNITCH</a></li>
+ <font size="10" color="red"> <li id="js-hour"><a></a></li>
+  <li id="js-minute"><a></a></li>
+  <li id="js-second"><a></a></li>	</font>			
+			</ul>
+		</div>	
+		<div id="d-hd">
+			<img id="hd-pic" src="img/header.png" style="width:100%">
+				
+			
+		</div>
+		<!--++++++ LIST NAVIGATION+++++++-->
+		<div id="d-nav" style="width:100%">
+			<ul id="navli">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="sortinghat.html">Sorting Hat</a></li>
+				<li><a href="siteII/book.html">Books</a></li>
+				<li><a href="tour.html">Tour</a></li>
+				<li><a href="game.html">Game</a></li>
+			</ul>
+		</div>
+
+		<!--CONTENT STARTS HERE-->
+	
+		<script type="text/javascript" src="snitch.js">
+		
+		</script>
+		<div class='snitch' id='snitch1' onclick='clickSnitch()'></div>
+		<script>
+		
+			snitchImg = document.getElementById("snitch1");
+			snitchImg.style.backgroundImage = "url('"+snitch1.imageLink+"')";
+			
+			flySnitch();
+
+			function flySnitch(){
+				var randY = Math.floor(Math.random()*20);
+				var randX = Math.floor(Math.random()*105);
+
+
+				switch(snitch1.facing){
+					case FACE_DIR.LEFT:
+						
+						if(randX > snitch1.position.x){
+							console.log("from " + snitch1.position.x + " to " + randX);
+							console.log("switch to right");
+							snitch1.facing = FACE_DIR.RIGHT;
+							snitchImg.style.transform = "rotate(180deg)";
+						}
+						break;
+					case FACE_DIR.RIGHT:
+						if(randX < snitch1.position.x){
+							console.log("to " + snitch1.position.x + " from " + randX);
+							console.log("switch to left");
+							snitch1.facing = FACE_DIR.LEFT;
+							snitchImg.style.transform = "rotate(0deg)";
+						}
+						break;
+				}
+
+				snitch1.position.x = randX;
+				snitch1.position.y = randY;
+
+				snitchImg.style.marginTop = randY+"%";
+				snitchImg.style.marginLeft = randX+"%";
+				setTimeout("flySnitch()",750);
+			}
+			alert("Catch the golden snitch before time expires");
+			function clickSnitch(){
+				
+				  var r = confirm("Youve caught the golden snitch in "+minutes+" minutes and "+seconds+" seconds\n Do you want to play again");
+					if (r == true) {
+					location.reload();
+					} else {
+				window.location.href = "index.html";
+					}
+				
+			}
+			
+		</script>
+
+
+		<script src="timer.js"> 
+
+		</script>
+
+	</body>
+
+	
+	
+	<!--++++++++++++++++++++++++++++++FOOTER-->
+	<footer>
+	<div id="d-footer">
+	</footer>
+</html>
